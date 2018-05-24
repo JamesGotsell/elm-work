@@ -1,0 +1,23 @@
+var _user$project$Hello$x = 3;
+var _user$project$Hello$byFour = function (x) {
+	return x * 4;
+};
+var _user$project$Hello$multiply = F2(
+	function (x, y) {
+		return x * y;
+	});
+var _user$project$Hello$byThree = function (x) {
+	return A2(_user$project$Hello$multiply, 3, x);
+};
+var _user$project$Hello$by3multByfour_ = function (y) {
+	return _user$project$Hello$byFour(
+		_user$project$Hello$byThree(y));
+};
+var _user$project$Hello$byThree_ = _user$project$Hello$multiply(3);
+var _user$project$Hello$addOne = function (x) {
+	return x + 1;
+};
+var _user$project$Hello$main = _elm_lang$virtual_dom$Native_VirtualDom.staticProgram(
+	_elm_lang$html$Html$text(
+		_elm_lang$core$Basics$toString(
+			_user$project$Hello$addOne(1) + _user$project$Hello$by3multByfour_(2))));
